@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget and Expense Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Google Fonts for custom font usage -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1>Budget Planner</h1>
+            <nav>
+                <ul>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tips">Tips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="calculator" class="container">
+            <h2>Budget and Expense Calculator</h2>
+
+            <!-- Budget Input Section -->
+            <div class="budget-section">
+                <label for="budget">Monthly Budget:</label>
+                <input type="number" id="budget" placeholder="Enter your budget">
+            </div>
+
+            <!-- Expense Input Section -->
+            <div class="expense-section">
+                <label for="expense">Expense Amount:</label>
+                <input type="number" id="expense" placeholder="Enter an expense">
+                <label for="expense-name">Expense Description:</label>
+                <input type="text" id="expense-name" placeholder="Enter expense description">
+                <button onclick="addExpense()">Add Expense</button>
+            </div>
+
+            <!-- Summary Section -->
+            <div class="summary-section">
+                <h3>Summary</h3>
+                <p>Budget: $<span id="budget-value">0</span></p>
+                <p>Total Expenses: $<span id="total-expenses">0</span></p>
+                <p>Remaining Budget: $<span id="remaining-budget">0</span></p>
+            </div>
+
+            <!-- Expense List Section -->
+            <div class="expense-list-section">
+                <h3>Expenses</h3>
+                <ul id="expense-list"></ul>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="info-section">
+            <h2>About This Calculator</h2>
+            <p>This budget and expense calculator helps you manage your finances by tracking your monthly budget and
+                expenses. Please enter your income, add your monthly expenses, and then see the summary of your
+                financial status.</p>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="info-section">
+            <h2>Budgeting Tips</h2>
+            <ul>
+                <li>Track all your expenses to identify spending patterns.</li>
+                <li>Create a realistic savings goal and stick to it.</li>
+                <li>Avoid wasteful purchases and prioritize needs over wants.</li>
+                <li>Review and adjust your budget regularly to stay on track.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Budget Planner. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
